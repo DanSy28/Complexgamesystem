@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/ComplexGamingAdvance/Offline.unity
+    guid: ee8bac3ce635f0e49a7e181b88a3c211
+  - enabled: 1
+    path: Assets/Scenes/ComplexGamingAdvance/Online.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}

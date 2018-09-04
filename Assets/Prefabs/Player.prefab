@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 136719504072660282}
   - component: {fileID: 114372239719401216}
   - component: {fileID: 143734198939378002}
+  - component: {fileID: 114765593165577324}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -50,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1231083016118980
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1167491432666562}
   m_LocalRotation: {x: 0.008726558, y: 0, z: 0, w: 0.999962}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 4439317227264350}
@@ -102,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135004375819914}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3, z: 6}
+  m_LocalPosition: {x: -5.2, y: 4.35, z: 3.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4190421685056752}
@@ -256,7 +257,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1167491432666562}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -279,11 +280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70df98faa2ebfba49949c5e68d1f48dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 4190421685056752}
   weapon: {fileID: 1167491432666562}
   speed: 6
   jumpSpeed: 8
   gravity: 20
   controller: {fileID: 143734198939378002}
+  rigid: {fileID: 0}
 --- !u!114 &114527461898753730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -292,17 +295,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 1231083016118980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16ccff7cc0188804ca2feee7c7ee7926, type: 3}
+  m_Script: {fileID: 11500000, guid: 60d81a43d688e0a40b03411195cb1573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideCursor: 0
   target: {fileID: 4439317227264350}
+  offset: {x: 0, y: 1, z: 0}
   distance: 5
   xSpeed: 120
   ySpeed: 120
   yMinLimit: -20
   yMaxLimit: 80
+  cameraCollision: 0
+  rayDistance: 1000
+  ignoreLayer:
+    serializedVersion: 2
+    m_Bits: 0
   distanceMin: 0.5
   distanceMax: 15
+--- !u!114 &114765593165577324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135004375819914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db20662ac8e76304a8551b8bd1e700ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &114943067715471228
 MonoBehaviour:
   m_ObjectHideFlags: 1
