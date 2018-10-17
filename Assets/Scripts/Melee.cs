@@ -19,13 +19,8 @@ public class Melee : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //decet enemy 
-        Enemy enemy = other.GetComponent<Enemy>();
-        if (enemy)
-        {
-            enemy.DealDamage(damage);
-            gameObject.SetActive(false);
-        }
+        
+       
     }
 
 }

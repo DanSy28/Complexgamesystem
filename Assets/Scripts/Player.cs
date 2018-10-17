@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Transform cam;
-    public GameObject weapon;
+   // public GameObject weapon;
 
     public float speed = 6.0F;
     public float jumpSpeed = 8.0F;
@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            weapon.SetActive(true);
+            //weapon.SetActive(true);
         }
     }
 }
